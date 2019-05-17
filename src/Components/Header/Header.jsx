@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
+import menu from "../../assets/icons/menu.png";
 
 class Header extends Component {
   render() {
@@ -13,6 +14,7 @@ class Header extends Component {
             height="auto"
             alt=""
           />
+          <img src={menu} width="18px" height="auto" alt="" />
           <span>LOGO</span>
         </div>
         <div className="search">
