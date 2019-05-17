@@ -1,0 +1,55 @@
+@import "../../variables.scss";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.classic {
+  width: 100%;
+  .item {
+    position: relative;
+    height: 300px;
+    margin-left: 15px;
+    background-size: cover;
+    .shade {
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+    }
+    .title {
+      color: #fff;
+      bottom: 20px;
+      font-size: 1.6em;
+      padding: 20px 0 40px;
+      font-weight: 600;
+    }
+  }
+}
+
+.slick-slide img {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.btn-special {
+  margin-left: 5px;
+  margin-bottom: 30px;
+  display: inline-block;
+  color: $primaryColor;
+  font-weight: 800;
+  box-shadow: 10px 10px 10px $primaryColor;
+  text-shadow: 0px 10px 10px $primaryColor;
+  padding: 8px 12px;
+  font-size: 0.8em;
+  border: 1px solid $primaryColor;
+  background-color: transparent;
+  transform: skew(-10deg);
+}
+.btn-special:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .genre {
+    display: none;
+  }
+}

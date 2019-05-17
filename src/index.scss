@@ -1,0 +1,176 @@
+@import "./variables.scss";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* This file contains the global style */
+* {
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  color: rgba(250, 250, 250, 0.4);
+}
+.active {
+  color: $primaryColor;
+}
+body {
+  background-color: #0f1115;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.transition {
+  transition: all 0.5s;
+}
+.primary {
+  background-color: $primaryColor;
+}
+.text-primary {
+  color: $primaryColor;
+}
+.text-white {
+  color: #fff;
+}
+.white {
+  background-color: #fff;
+}
+.black {
+  background-color: #444;
+}
+/* ALIGNMENT */
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.column {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.align-start {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.align-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.align-end {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.justify-start {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.justify-end {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.justify-between {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.justify-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.justify-around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+/* CARDS */
+.card-1 {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+​ .card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.card-2 {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+​ .card-2:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+/* SHADOWS */
+
+.shadow-1 {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+.shadow-2 {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.shadow-3 {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.shadow-deep {
+  box-shadow: 0 10px 20px 0 rgba(100, 100, 100, 0.18),
+    0 15px 25px 0 rgba(100, 100, 100, 0.15);
+}
+/* Buttons */
+
+.btn {
+  text-align: center;
+  font-size: 13px;
+  padding: 8.5px 20px;
+  border: 1px solid $primaryColor;
+  border-radius: 2px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+.btn-small {
+  padding: 5px 18px;
+  font-size: 12px;
+}
+.btn-medium {
+  padding: 11px 18px;
+}
+.btn-large {
+  font-size: 18px;
+  padding: 14px 20px;
+}
+.btn-full {
+  width: 100%;
+  padding: 14.2px 0;
+  text-align: center;
+  margin: 6px 0px;
+}
+.btn-border {
+  border: 1px solid #b8b8b8;
+}
+
+/* Background */
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Toast */
+#toast {
+  position: fixed;
+  max-width: 300px;
+  bottom: -50px;
+  left: 60px;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 2px;
+  background-color: #222;
+  transition: all 0.5s;
+}
+#toast span {
+  padding-right: 50px;
+}
