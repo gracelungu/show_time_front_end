@@ -12,14 +12,19 @@ class Home extends Component {
         <Header />
 
         <section className="body flex">
+
           <Genre />
+
           <div className="focus">
             <Classic />
           </div>
+
         </section>
       </section>
     );
   }
 }
+
+
 
 export default Home;

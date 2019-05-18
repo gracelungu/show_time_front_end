@@ -3,19 +3,20 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 import menu from "../../assets/icons/menu.png";
 
+import { connect } from 'react-redux';
+
 class Header extends Component {
+  toggleNav() {
+    this.props.toggleNav();
+  }
+
   render() {
+
     return (
       <header className="flex justify-between align-center">
         <div className="logo flex align-center">
-          <img
-            src="../assets/icons/menu.png"
-            width="20px"
-            height="auto"
-            alt=""
-          />
-          <img src={menu} width="18px" height="auto" alt="" />
-          <span>LOGO</span>
+          <img src={menu} width="18px" height="auto" alt="" onClick={() => this.toggleNav()} />
+          <span >LOGO</span>
         </div>
         <div className="search">
           <input type="text" placeholder="Search.." />
@@ -41,4 +42,16 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const mapStateToProps = state => {
+  return {
+    navToggle: state.navToggle
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleNav: () => { dispatch({ type: 'TOGGLE_NAV' }) }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

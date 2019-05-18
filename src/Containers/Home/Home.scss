@@ -3,6 +3,7 @@
 .body {
   padding: 50px $sidePadding 10px;
   color: rgba(250, 250, 250, 0.4);
+  overflow-x: hidden;
 }
 
 .body .focus {

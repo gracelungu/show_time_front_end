@@ -51,7 +51,7 @@ header nav .btn {
 }
 
 @media only screen and (max-width: 768px) {
-  $sidePadding: 0px;
+  $sidePadding: 30px;
   header {
     display: none;
     padding: 15px $sidePadding;
