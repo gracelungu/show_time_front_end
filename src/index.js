@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import "./index.scss";
 import Home from "./Containers/Home/Home";
 import Signup from "./Containers/Signup/Signup";
+import Login from "./Containers/Login/Login";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -18,6 +19,7 @@ const routing = (
       <div>
         <Route exact path="/" component={Home} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/login" component={Login} />
       </div>
     </Router>
   </Provider>
