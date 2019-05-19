@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .body {
-  padding: 50px $sidePadding 10px;
+  padding: 120px $sidePadding 10px;
   color: rgba(250, 250, 250, 0.4);
   overflow-x: hidden;
 }
@@ -13,8 +13,9 @@
 @media only screen and (max-width: 768px) {
   $sidePadding: 15px;
   .body {
-    padding: 20px $sidePadding 10px;
+    padding: 80px $sidePadding 10px;
     padding-left: 0;
+    padding-right: 0;
   }
   .body .focus {
     width: 100%;

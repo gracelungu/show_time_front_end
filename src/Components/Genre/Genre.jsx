@@ -10,7 +10,7 @@ class Genre extends Component {
     const { navToggle } = this.props;
 
     return (
-      <div className="genre" style={{ display: navToggle ? 'none' : 'block' }}>
+      <div className="genre" style={{ display: navToggle ? null : 'block' }}>
         <span className="title">Genre</span>
         <div className="items flex column">
           <Link to="" className="item">

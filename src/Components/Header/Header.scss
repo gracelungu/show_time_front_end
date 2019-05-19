@@ -1,12 +1,17 @@
 @import "../../variables.scss";
 
 header {
-  padding: 20px $sidePadding;
+  width: 100%;
+  position: fixed;
+  padding: 20px 0;
+  z-index: 999;
+  background: $secondaryColor;
 }
 
 header .logo {
   color: #fff;
   font-family: "Playfair Display", serif;
+  padding: 0 $sidePadding;
 }
 
 header .logo img {
@@ -26,6 +31,10 @@ header .search input {
 
 header .search input::placeholder {
   color: rgba(250, 250, 250, 0.4);
+}
+
+header nav{
+  padding: 0 $sidePadding;
 }
 
 header nav .links {
@@ -51,10 +60,13 @@ header nav .btn {
 }
 
 @media only screen and (max-width: 768px) {
-  $sidePadding: 30px;
+  $sidePadding: 20px;
   header {
     display: none;
-    padding: 15px $sidePadding;
+    padding: 15px 0;
+  }
+  header .logo{
+    padding: 0 $sidePadding;
   }
   header .logo img {
     display: block;
