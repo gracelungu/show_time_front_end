@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import google from "../../assets/images/google.png";
-import facebook from "../../assets/images/facebook.png";
-
 class Reset extends Component {
     render() {
         return (
