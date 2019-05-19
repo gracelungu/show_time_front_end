@@ -2,10 +2,15 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Genre.scss";
 
+import { connect } from 'react-redux';
+
 class Genre extends Component {
   render() {
+
+    const { navToggle } = this.props;
+
     return (
-      <div className="genre">
+      <div className="genre" style={{ display: navToggle ? null : 'block' }}>
         <span className="title">Genre</span>
         <div className="items flex column">
           <Link to="" className="item">
@@ -50,4 +55,10 @@ class Genre extends Component {
   }
 }
 
-export default Genre;
+const mapStateToProps = state => {
+  return {
+    navToggle: state.navToggle
+  }
+}
+
+export default connect(mapStateToProps)(Genre)

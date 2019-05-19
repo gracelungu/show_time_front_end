@@ -1,5 +1,5 @@
 .body .genre {
-  width: 16vw;
+  min-width:100px;
 }
 
 .body .genre .title {
@@ -17,4 +17,12 @@
 
 .body .genre .item:hover {
   color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .genre {
+    display: none;
+    min-width: 200px;
+    padding-left:30px;
+  }
 }

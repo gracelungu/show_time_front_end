@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
+
 import "./Classic.scss";
 
 import bumb from "../../assets/images/bumb.jpg";

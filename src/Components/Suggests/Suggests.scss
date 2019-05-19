@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.suggests{
+    width: 230px;
+    .title{
+        padding-bottom: 30px;
+        color:#fff;
+    }
+    .items{
+        .item{
+            padding-bottom: 30px;
+            .image{
+                background-size: cover;
+                width: 180px;
+                height: 120px;
+                border-radius: 5px;
+            }
+            .title{
+                padding:10px 0;
+                color:#fff;
+                font-size: .8em;
+                padding-left:10px;
+                padding-right: 60px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .suggests{
+        display: none;
+    }
+}
