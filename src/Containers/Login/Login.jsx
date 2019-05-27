@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "./Login.scss";
 
 import google from "../../assets/images/google.png";
@@ -32,13 +33,15 @@ class Login extends Component {
                             <div className="btn primary text-white">
                                 LOGIN
                             </div>
+
                             <div className="other">
-                                <span>Don't have an account ? </span> <b>Register</b>
+                                <span>Don't have an account ? </span> <Link to="/signup"><b>Register</b></Link>
                             </div>
+
                         </div>
                     </form>
                 </div>
-            </section>
+            </section >
         );
     }
 }

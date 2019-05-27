@@ -30,10 +30,10 @@ class Header extends Component {
               Tv Shows
             </Link>
           </div>
-          <Link to="" className="btn btn-small btn-outline text-primary">
+          <Link to="/signup" className="btn btn-small btn-outline text-primary">
             REGISTER
           </Link>
-          <Link to="" className="btn btn-small primary text-white">
+          <Link to="/login" className="btn btn-small primary text-white">
             LOGIN
           </Link>
         </nav>

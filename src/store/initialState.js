@@ -1,5 +1,9 @@
 const initialState = {
-    navToggle: true
+    navToggle: true,
+    user: {},
+    loading: false,
+    loggedIn: false,
+    error: null,
 };
 
 export default initialState;
