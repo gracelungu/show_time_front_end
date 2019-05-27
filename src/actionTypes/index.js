@@ -1,0 +1,5 @@
+export const TOGGLE_NAV = 'TOGGLE_NAV';
+export const EMAIL_AUTH = 'EMAIL_AUTH';
+export const EMAIL_AUTH_STARTED = 'EMAIL_AUTH_STARTED';
+export const EMAIL_AUTH_SUCCESS = 'EMAIL_AUTH_SUCCESS';
+export const EMAIL_AUTH_ERROR = 'EMAIL_AUTH_ERROR';
