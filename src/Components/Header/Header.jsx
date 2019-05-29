@@ -21,8 +21,8 @@ class Header extends Component {
         <div className="search">
           <input type="text" placeholder="Search.." />
         </div>
-        <nav className="flex align-center">
-          <div className="links">
+        <nav className="flex align-center" >
+          <div className="links" >
             <Link to="" className="item active">
               Movies
             </Link>
@@ -30,12 +30,14 @@ class Header extends Component {
               Tv Shows
             </Link>
           </div>
-          <Link to="/signup" className="btn btn-small btn-outline text-primary">
-            REGISTER
+          <div style={{ display: this.props.loggedIn ? 'none' : 'block' }}>
+            <Link to="/signup" className="btn btn-small btn-outline text-primary">
+              REGISTER
           </Link>
-          <Link to="/login" className="btn btn-small primary text-white">
-            LOGIN
+            <Link to="/login" className="btn btn-small primary text-white">
+              LOGIN
           </Link>
+          </div>
         </nav>
       </header>
     );
@@ -44,7 +46,8 @@ class Header extends Component {
 
 const mapStateToProps = state => {
   return {
-    navToggle: state.navToggle
+    navToggle: state.navToggle,
+    loggedIn: state.loggedIn
   }
 }
 

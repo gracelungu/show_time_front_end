@@ -22,8 +22,12 @@ export const emailAuth = ({ username, email, password }) => async dispatch => {
         dispatch(emailAuthSuccess(res.data.user));
         return res;
     } catch (e) {
-        dispatch(emailAuthError(e.response.data.message));
-        return e.response;
+        if (e.response) {
+            dispatch(emailAuthError(e.response.data.message));
+            return e.response;
+        }
+        // Dispatch a connection error message
+        return e;
     }
 
 };
