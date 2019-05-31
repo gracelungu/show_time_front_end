@@ -84,7 +84,8 @@ class Signup extends Component {
   }
 }
 
-const mapStateToProps = ({ loading, error }) => {
+const mapStateToProps = ({ auth }) => {
+  const { loading, error } = auth;
   return {
     loading,
     error,

@@ -15,6 +15,12 @@
                 color:#707070;
                 font-size: .9em;
             }
+            .error{
+                font-size: .9em;
+                padding-top: 10px;
+                color:$errorColor;
+                transition: all .5s; 
+            }
             padding-bottom: 60px;
         }
         form{

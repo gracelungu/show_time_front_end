@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { base_url } from '../constants';
-import { TOGGLE_NAV, EMAIL_AUTH_ERROR, EMAIL_AUTH_SUCCESS, EMAIL_AUTH_STARTED } from '../actionTypes';
+import { EMAIL_AUTH_ERROR, EMAIL_AUTH_SUCCESS, EMAIL_AUTH_STARTED } from '../actionTypes';
 
 export const emailAuth = ({ username, email, password }) => async dispatch => {
     dispatch(emailAuthStarted());
@@ -22,8 +22,12 @@ export const emailAuth = ({ username, email, password }) => async dispatch => {
         dispatch(emailAuthSuccess(res.data.user));
         return res;
     } catch (e) {
-        dispatch(emailAuthError(e.response.data.message));
-        return e.response;
+        if (e.response) {
+            dispatch(emailAuthError(e.response.data.message));
+            return e.response;
+        }
+        // Dispatch a connection error message
+        return e;
     }
 
 };
