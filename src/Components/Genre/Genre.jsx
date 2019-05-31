@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 class Genre extends Component {
   render() {
 
-    const { navToggle } = this.props;
+    const { navToggle } = this.props; console.log(navToggle);
 
     return (
       <div className="genre" style={{ display: navToggle ? null : 'block' }}>
@@ -57,7 +57,7 @@ class Genre extends Component {
 
 const mapStateToProps = state => {
   return {
-    navToggle: state.navToggle
+    navToggle: state.index.navToggle
   }
 }
 

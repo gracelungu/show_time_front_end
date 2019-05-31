@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { base_url } from '../constants';
-import { TOGGLE_NAV, EMAIL_AUTH_ERROR, EMAIL_AUTH_SUCCESS, EMAIL_AUTH_STARTED } from '../actionTypes';
+import { EMAIL_AUTH_ERROR, EMAIL_AUTH_SUCCESS, EMAIL_AUTH_STARTED } from '../actionTypes';
 
 export const emailAuth = ({ username, email, password }) => async dispatch => {
     dispatch(emailAuthStarted());

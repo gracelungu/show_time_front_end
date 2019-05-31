@@ -44,10 +44,10 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ index, auth }) => {
   return {
-    navToggle: state.navToggle,
-    loggedIn: state.loggedIn
+    navToggle: index.navToggle,
+    loggedIn: auth.loggedIn
   }
 }
 

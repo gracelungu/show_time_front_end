@@ -1,12 +1,14 @@
+import { combineReducers } from 'redux';
 import initialState from '../store/initialState';
 import {
     TOGGLE_NAV,
 } from '../actionTypes';
 
-import authReducer from './auth';
+import auth from './auth';
 
+const { index: global } = initialState;
 
-const reducer = (state = initialState, { type, payload }) => {
+const index = (state = global, { type, payload }) => {
 
     switch (type) {
         case TOGGLE_NAV:
@@ -25,4 +27,6 @@ const reducer = (state = initialState, { type, payload }) => {
     }
 };
 
-export { reducer, authReducer };
+const reducers = combineReducers({ index, auth });
+
+export default reducers;

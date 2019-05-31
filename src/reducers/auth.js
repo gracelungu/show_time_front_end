@@ -3,10 +3,14 @@ import {
     EMAIL_AUTH_SUCCESS,
     EMAIL_AUTH_STARTED,
     EMAIL_AUTH_ERROR,
+    EMAIL_LOGIN_SUCCESS,
+    EMAIL_LOGIN_STARTED,
+    EMAIL_LOGIN_ERROR,
 } from '../actionTypes';
 
+const { auth } = initialState;
 
-const authReducer = (state = initialState, { type, payload }) => {
+const authReducer = (state = auth, { type, payload }) => {
 
     switch (type) {
         case EMAIL_AUTH_STARTED:
@@ -23,6 +27,26 @@ const authReducer = (state = initialState, { type, payload }) => {
                 loggedIn: true,
             }
         case EMAIL_AUTH_ERROR:
+            return {
+                ...state,
+                loading: false,
+                error: payload,
+                loggedIn: false,
+            }
+        case EMAIL_LOGIN_STARTED:
+            return {
+                ...state,
+                loading: true
+            }
+        case EMAIL_LOGIN_SUCCESS:
+            return {
+                ...state,
+                user: payload,
+                loading: false,
+                error: false,
+                loggedIn: true,
+            }
+        case EMAIL_LOGIN_ERROR:
             return {
                 ...state,
                 loading: false,
