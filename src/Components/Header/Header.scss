@@ -9,7 +9,9 @@ header {
 }
 
 header .logo {
-  color: #fff;
+  span{
+    color: #fff;
+  }
   font-family: "Playfair Display", serif;
   padding: 0 $sidePadding;
 }
@@ -56,6 +58,15 @@ header nav .active {
 }
 
 header nav .btn {
+  margin-left: 20px;
+}
+
+header .profile{
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid #fff;
   margin-left: 20px;
 }
 

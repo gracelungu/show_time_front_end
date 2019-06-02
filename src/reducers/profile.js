@@ -1,67 +1,57 @@
 import initialState from '../store/initialState';
 import {
-    EMAIL_AUTH_SUCCESS,
-    EMAIL_AUTH_STARTED,
-    EMAIL_AUTH_ERROR,
-    EMAIL_LOGIN_SUCCESS,
-    EMAIL_LOGIN_STARTED,
-    EMAIL_LOGIN_ERROR,
-    LOGOUT
+    GET_PROFILE_SUCCESS,
+    GET_PROFILE_STARTED,
+    GET_PROFILE_ERROR,
+    UPDATE_PROFILE_SUCCESS,
+    UPDATE_PROFILE_STARTED,
+    UPDATE_PROFILE_ERROR,
 } from '../actionTypes';
 
-const { auth } = initialState;
+const { profile } = initialState;
 
-const authReducer = (state = auth, { type, payload }) => {
+const profileReducer = (state = profile, { type, payload }) => {
 
     switch (type) {
-        case LOGOUT:
-            return {
-                ...state,
-                loggedIn: false,
-            }
-        case EMAIL_AUTH_STARTED:
+        case GET_PROFILE_STARTED:
             return {
                 ...state,
                 loading: true
             }
-        case EMAIL_AUTH_SUCCESS:
+        case GET_PROFILE_SUCCESS:
             return {
                 ...state,
                 user: payload,
                 loading: false,
                 error: false,
-                loggedIn: true,
             }
-        case EMAIL_AUTH_ERROR:
+        case GET_PROFILE_ERROR:
             return {
                 ...state,
                 loading: false,
                 error: payload,
-                loggedIn: false,
             }
-        case EMAIL_LOGIN_STARTED:
+        case UPDATE_PROFILE_STARTED:
             return {
                 ...state,
                 loading: true
             }
-        case EMAIL_LOGIN_SUCCESS:
+        case UPDATE_PROFILE_SUCCESS:
             return {
                 ...state,
                 user: payload,
                 loading: false,
                 error: false,
-                loggedIn: true,
             }
-        case EMAIL_LOGIN_ERROR:
+        case UPDATE_PROFILE_ERROR:
             return {
                 ...state,
                 loading: false,
                 error: payload,
-                loggedIn: false,
             }
         default:
             return state;
     }
 };
 
-export default authReducer;
+export default profileReducer;

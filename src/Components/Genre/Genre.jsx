@@ -43,21 +43,32 @@ class Genre extends Component {
           <Link to="" className="item">
             Tv Shows
           </Link>
-          <Link to="" className="item">
-            Login
+          {
+            localStorage.getItem('username') !== 'null'
+              ?
+              <Link to="/profile" className="item">
+                Profile
           </Link>
-          <Link to="" className="item">
-            Register
+              :
+              <React.Fragment>
+                <Link to="/login" className="item">
+                  Login
           </Link>
+                <Link to="/register" className="item">
+                  Register
+          </Link>
+              </React.Fragment>
+          }
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ index, auth }) => {
   return {
-    navToggle: state.index.navToggle
+    navToggle: index.navToggle,
+    loggedIn: auth.loggedIn,
   }
 }
 

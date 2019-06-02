@@ -8,6 +8,11 @@ import Category from "../../Components/Category/Category";
 import Suggests from "../../Components/Suggests/Suggests";
 
 class Home extends Component {
+
+  componentWillMount() {
+    const token = localStorage.getItem('token');
+  }
+
   render() {
     return (
       <section>
