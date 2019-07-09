@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import initialState from '../store/initialState';
 import {
-    TOGGLE_NAV,
+    TOGGLE_NAV
 } from '../actionTypes';
 
 import auth from './auth';
+import profile from './profile';
 
 const { index: global } = initialState;
 
@@ -27,6 +28,6 @@ const index = (state = global, { type, payload }) => {
     }
 };
 
-const reducers = combineReducers({ index, auth });
+const reducers = combineReducers({ index, auth, profile });
 
 export default reducers;

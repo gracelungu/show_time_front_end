@@ -7,6 +7,7 @@ import Home from "./Containers/Home/Home";
 import Signup from "./Containers/Signup/Signup";
 import Login from "./Containers/Login/Login";
 import Reset from "./Containers/Reset/Reset";
+import Profile from "./Containers/Profile/Profile";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -22,6 +23,7 @@ const routing = (
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/reset" component={Reset} />
+        <Route exact path="/profile" component={Profile} />
       </div>
     </Router>
   </Provider>

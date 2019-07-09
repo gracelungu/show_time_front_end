@@ -3,7 +3,12 @@ const initialState = {
     auth: {
         user: {},
         loading: false,
-        loggedIn: false,
+        error: null,
+        loggedIn: false
+    },
+    profile: {
+        user: {},
+        loading: false,
         error: null,
     }
 };

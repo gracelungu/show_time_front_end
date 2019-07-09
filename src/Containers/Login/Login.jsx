@@ -31,6 +31,10 @@ class Login extends Component {
                 return;
             }
 
+            // Set the token
+            localStorage.setItem('token', res.data.token);
+            localStorage.setItem('username', res.data.user.username);
+
             this.props.history.push('/');
 
         });
