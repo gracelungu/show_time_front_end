@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.jsx should render Home.jx 1`] = `ShallowWrapper {}`;
+
+exports[`Login.jsx should render Login.jx 1`] = `undefined`;
